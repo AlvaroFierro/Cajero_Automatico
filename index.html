@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Cajero Automatico</title>
-  </head>
-  <body>
+</head>
+
+<body>
+    <form>
+        <!-- Pon a retirar si es tu caso en la linea **15**--->
+        <label class="form-label">Ingrese el monto a ingresar</label>
+        <!-- Pon id=Retiro si es tu caso en la linea **17**--->
+        <input type="text" class="form-control" id="Ingreso">
+        <br>
+        <label class="form-label">Saldo actual</label>
+        <input type="text" class="form-control" id="Resultados">
+        <!-- Pon retirar(event) si es tu caso en la line **14**--->
+        <button type="submit" onclick="ingresar(event)">Submit</button>
+    </form>
+
     <script src="./index.js"></script>
-  </body>
+</body>
+
 </html>
