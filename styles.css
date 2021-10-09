@@ -1,0 +1,65 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 63.9%;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Main {
+    font-weight: 300;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #FFFFFF;
+}
+
+.header {
+    border-bottom: solid 1px rgba(146, 161, 176, .15);
+    color: #161616;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_conteiner {
+    text-decoration: none;
+    height: 5rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+.recorte {
+    width: 76vw;
+}
+
+.container-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    width: 30%;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1rem;
+}
