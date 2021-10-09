@@ -2,7 +2,7 @@
 //****Ingreso.- onclick="ingresar()" submit name--id="Ingreso"
 //       es decir se ejecutara ingresar() al hacer el click en el botton con id=Ingreso
 //****Retirar.- onclick="retirar()" submit name--id="Retiro"
-//       es decir se ejecutara ingresar() al hacer el click en el botton con id=Retiro
+//       es decir se ejecutara retirar() al hacer el click en el botton con id=Retiro
 //  -----------------------------resultados= linea **1**---------------------------------------
 var x = ["", 0];
 
