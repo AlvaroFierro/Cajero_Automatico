@@ -8,6 +8,7 @@
 
 body {
     box-sizing: border-box;
+    color: #282828;
     font-size: 63.9%;
     width: 100%;
     height: 100%;
@@ -23,16 +24,33 @@ body {
     background: #FFFFFF;
 }
 
-.header {
+.shadow-border {
     border-bottom: solid 1px rgba(146, 161, 176, .15);
-    color: #161616;
+}
+
+h1 {
+    color: #463226;
+}
+
+.shadow-pink {
+    width: 17rem;
+    height: 1vw;
+    background-color: #fff1dd;
+    position: fixed;
+    top: 3.8vw;
+    z-index: -1;
+    left: 14rem;
+    border-radius: 3px;
+}
+
+.header {
     display: flex;
     justify-content: center;
+    height: 15vh;
 }
 
 .nav_conteiner {
     text-decoration: none;
-    height: 5rem;
 }
 
 header h1 {
@@ -41,6 +59,7 @@ header h1 {
 
 .recorte {
     width: 76vw;
+    align-self: center;
 }
 
 .container-items {
@@ -61,5 +80,56 @@ nav {
 header a {
     text-decoration: none;
     color: inherit;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.active {
+    color: #EC615B;
+}
+
+.Main {
+    height: 70vh;
+}
+
+.footer {
+    height: 15vh;
+}
+
+.First-x {
+    width: 50%;
+}
+
+.Second-x {
+    width: 50%;
+}
+
+h2 {
+    color: #fa775a;
+}
+
+.inline {
+    display: block;
+    font-size: 5rem;
+}
+
+.Fx-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btn-pur {
+    background-color: #6844c9;
+    color: white;
+    height: 3rem;
+    width: 28%;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 23rem;
+    margin-top: 2rem;
 }
