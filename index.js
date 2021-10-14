@@ -9,10 +9,6 @@ const openEls = document.querySelectorAll("[data-open]");
 const closeEls = document.querySelectorAll("[data-close]");
 const isVisible = "is-visible";
 
-openEls.forEach(element => {
-    console.log(element);
-});
-
 for (const el of openEls) {
     el.addEventListener("click", function() {
         const modalId = this.dataset.open;
@@ -70,12 +66,33 @@ var pasa = false,
 
 function getInfo() {
     let findPerson = infoArray();
-    findPerson[0] != "" ? document.getElementById("Login").href = "In.html" : ErrorIntentarDN();
+    findPerson[0] != "" ? StartSecondPage() : ErrorIntentarDN();
 }
 
 function ErrorIntentarDN() {
     document.getElementById("Name").value = "";
     document.getElementById("Pas").value = "";
+
+}
+
+function StartSecondPage() {
+    document.getElementById('Login').href = '#welcome';
+    let section1 = document.getElementsByClassName('x');
+    setTimeout(function() {
+        document.getElementById('modal1').classList.add('quitB');
+        document.querySelector(".modal-dialog").classList.add('blog-shadow-dreamy');
+        Array.prototype.forEach.call(section1, function(e) {
+            e.classList.add("quit");
+            e.addEventListener("animationend", function() {
+                let app = document.getElementById('app');
+                e.style.display = "none";
+                document.getElementById('modal1').style.right = '72rem';
+                document.getElementById('modal1').style.top = '10vh';
+                app.style.width = '70vh';
+                app.style.height = '70vh';
+            })
+        });
+    }, 3700);
 }
 
 function infoArray() {

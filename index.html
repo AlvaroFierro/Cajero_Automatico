@@ -31,13 +31,13 @@
         </div>
     </header>
     <main class="Main">
-        <div class="First-x">
+        <div class="First-x x">
             <div class="Fx-content">
                 <h2><span class="inline">La llave precisa</span><span class="inline">Bank Coders</span><span class="inline">Usa ahora</span></h2>
                 <button type="button" class="btn-pur" data-open="modal1">Sign up</button>
             </div>
         </div>
-        <div class="Second-x">
+        <div class="Second-x x">
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
             <lottie-player src="https://uploads-ssl.webflow.com/5dd3495558fd7f3d1fcb52bc/5e7b212bc2dd15eeadb12f9c_Blogging%20Colored.json" background="transparent" speed="1" style="width: 100%; height: 100%;" autoplay="" loop="">
                 <div id="animation-container" class="main" aria-label="Lottie animation">
@@ -50,6 +50,7 @@
         </div>
         <div class="modal" id="modal1" data-animation="slideInOutLeft">
             <div class="modal-dialog">
+                <div class="route" id="welcome"></div>
                 <div id="app">
                     <div class="app-view">
                         <header class="app-header">
@@ -62,7 +63,7 @@
                         </header>
                         <input type="email" id="Name" required pattern=".*\.\w{2,}" placeholder="Email Address" />
                         <input type="password" id="Pas" required placeholder="Password" />
-                        <a onclick="getInfo()" id="Login" href="#welcome" class="app-button">Login</a>
+                        <a id="Login" onclick="getInfo()" class="app-button">Login</a>
                         <div class="app-register">
                             Don't have an account? <a>Sign Up</a>
                         </div>
@@ -145,6 +146,7 @@
                 </div>
             </div>
         </div>
+        <div>hola</div>
     </main>
     <footer class="shadow-border footer"></footer>
     <script src="./index.js"></script>

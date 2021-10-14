@@ -139,6 +139,7 @@ h2 {
 /*Modal stuf*/
 
 .modal {
+    transition: all 0.5s cubic-bezier(0.51, 0.92, 0.24, 1.15);
     position: fixed;
     top: 0;
     left: 0;
@@ -149,7 +150,6 @@ h2 {
     justify-content: center;
     padding: 1rem;
     background: rgba(0, 0, 0, 0.8);
-    ;
     cursor: pointer;
     visibility: hidden;
     opacity: 0;
@@ -283,8 +283,11 @@ h2 {
 
 /*inside modal*/
 
+* {
+    transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
 #app {
-    overflow: hidden;
     width: 50vh;
     height: 90vh;
     padding: 6vh;
@@ -875,4 +878,113 @@ input:not(:valid)~.app-button {
 .svg-activity-line {
     transform: translateY(10vh);
     opacity: 0;
+}
+
+#svg-lines {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    overflow: visible;
+    transform-origin: center 4vh;
+}
+
+.svg-data {
+    fill: none;
+    stroke-width: 0.5vh;
+}
+
+.svg-data.-temp {
+    stroke: #F4814B;
+    stroke-dasharray: 20, 118;
+}
+
+.svg-data.-cal {
+    stroke: #08B5CF;
+    stroke-dasharray: 20, 113;
+}
+
+.svg-data.-steps-bg {
+    stroke: #E0E1E0;
+    stroke-dasharray: 40, 100;
+    stroke-dashoffset: -60;
+}
+
+.svg-data.-steps {
+    stroke: #0F9EDE;
+    stroke-dasharray: 20, 73;
+    stroke-dashoffset: -53;
+}
+
+.svg-data.-heart {
+    stroke: #9965AA;
+    stroke-dasharray: 50, 200;
+    stroke-dashoffset: -150;
+}
+
+.svg-activity-fill {
+    fill: #C4E4F8;
+}
+
+.svg-activity-line {
+    fill: none;
+    stroke: #65BCEA;
+    stroke-miterlimit: 10;
+    stroke-width: 0.25vh;
+}
+
+.svg-activity-avg,
+.svg-activity-indicator {
+    fill: none;
+    stroke: #D0DFF0;
+    stroke-width: 0.25vh;
+    mix-blend-mode: multiply;
+}
+
+.svg-activity-fill,
+.svg-activity-line {
+    transform: translateY(10vh);
+    opacity: 0;
+}
+
+.route {
+    display: none;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    position: relative;
+}
+
+.quit {
+    animation: quit 1s cubic-bezier(0.77, 0, 0.175, 1) both;
+}
+
+@keyframes quit {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.quitB {
+    animation: quitb 1s cubic-bezier(0.77, 0, 0.175, 1) both;
+}
+
+@keyframes quitb {
+    from {
+        background: rgba(0, 0, 0, 0.8);
+    }
+    to {
+        background: rgba(0, 0, 0, 0);
+    }
+}
+
+.blog-shadow-dreamy {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
 }
