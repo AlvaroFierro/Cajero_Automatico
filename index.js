@@ -74,7 +74,8 @@ function getInfo() {
 }
 
 function ErrorIntentarDN() {
-    let newStuf = document.createAttribute("div");
+    document.getElementById("Name").value = "";
+    document.getElementById("Pas").value = "";
 }
 
 function infoArray() {
