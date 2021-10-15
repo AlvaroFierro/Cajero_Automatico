@@ -66,16 +66,15 @@ var pasa = false,
 
 function getInfo() {
     let findPerson = infoArray();
-    findPerson[0] != "" ? StartSecondPage() : ErrorIntentarDN();
+    findPerson[0] != "" ? StartSecondPage(findPerson) : ErrorIntentarDN();
 }
 
 function ErrorIntentarDN() {
     document.getElementById("Name").value = "";
     document.getElementById("Pas").value = "";
-
 }
 
-function StartSecondPage() {
+function StartSecondPage(Person) {
     document.getElementById('Login').href = '#welcome';
     let section1 = document.getElementsByClassName('x');
     setTimeout(function() {
@@ -88,11 +87,13 @@ function StartSecondPage() {
                 e.style.display = "none";
                 document.getElementById('modal1').style.right = '72rem';
                 document.getElementById('modal1').style.top = '10vh';
-                app.style.width = '70vh';
+                app.style.width = '55vh';
                 app.style.height = '70vh';
+                let Name = document.querySelector(".stringName");
+                Name.innerHTML = `Welcome back ${Person[0]},<br/> Things look <em>alright</em>.`;
             })
         });
-    }, 3700);
+    }, 4000);
 }
 
 function infoArray() {

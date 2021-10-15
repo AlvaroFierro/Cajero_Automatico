@@ -624,7 +624,7 @@ input:not(:valid)~.app-button {
 }
 
 .app-view:nth-child(2)>.app-header>h2>em {
-    color: #0F9EDE;
+    color: #6844c9;
     font-style: normal;
 }
 
@@ -636,7 +636,7 @@ input:not(:valid)~.app-button {
 
 .app-view:nth-child(2)>.app-content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: stretch;
     flex-wrap: wrap;
     flex-basis: 40%;
@@ -678,10 +678,8 @@ input:not(:valid)~.app-button {
 }
 
 .app-item {
-    flex-basis: 50%;
     flex-grow: 0;
     flex-shrink: 0;
-    border: 1px solid transparent;
     padding: 2vh 4vh;
     padding-bottom: 0;
 }
