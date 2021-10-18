@@ -14,8 +14,8 @@ class Clients {
   titularActivo() {
     return this.activo;
   }
-  abonandoDinero(abonar) {
-    this.saldo = this.saldo + abonar;
+  depositarDinero(deposito) {
+    this.saldo = this.saldo + deposito;
     return this.saldo;
   }
   retirarDinero(retiro) {
