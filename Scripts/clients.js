@@ -24,6 +24,6 @@ class Clients {
   }
 }
 
-const Angel = new Clients("Angel", "Angel123", "550");
-const Luis = new Clients("Luis", "Luis213", "450");
-const Alvaro = new Clients("Alvaro", "Alvaro312", "350");
+var Angel = new Clients("Angel", "Angel123", "550");
+var Luis = new Clients("Luis", "Luis213", "450");
+var Alvaro = new Clients("Alvaro", "Alvaro312", "350");
