@@ -43,21 +43,25 @@ var cuentas = [
 
 var x = ["", 0];
 
-function ingresar(event) {
+function ingresar() {
+
     //esto es para que no se reinicio tu submit
-    event.preventDefault();
     //Code here: Alvaro Fierro
     //Se te dara un array con nombre x donde contenga [nombre=string,saldo=Number];
     //Como hacerlo?= estan las indicaciones en la linea **2**
 
+
 }
 
-function retirar(event) {
+function retirar() {
+    let findPerson = infoArray();
     //esto es para que no se reinicio tu submit
-    event.preventDefault();
     //Code here Luis moreno
     //Se te dara un array con nombre x donde contenga [nombre=string,saldo=Number];
     //el resultado estan las indicaciones en la linea **4**
+    cuentas[item].saldo = y;
+    let resulDirec = document.getElementById("resultado");
+    resulDirec.innerHTML = `$${cuentas[item].saldo}`;
 
 }
 //get user pasword
@@ -75,6 +79,7 @@ function ErrorIntentarDN() {
 }
 
 function StartSecondPage(Person) {
+
     document.getElementById('Login').href = '#welcome';
     let section1 = document.getElementsByClassName('x');
     setTimeout(function() {

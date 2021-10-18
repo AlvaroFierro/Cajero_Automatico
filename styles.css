@@ -1008,3 +1008,18 @@ input:not(:valid)~.app-button {
 .app-item:not(:last-child) {
     margin-bottom: 1rem;
 }
+
+.Content-input {
+    width: 50%;
+    height: 80vh;
+}
+
+.input-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-input:not(:last-child) {
+    margin-bottom: 1rem;
+}
