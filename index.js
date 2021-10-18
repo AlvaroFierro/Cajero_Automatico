@@ -5,6 +5,13 @@
 //       es decir se ejecutara ingresar() al hacer el click en el botton con id=Retiro
 //  -----------------------------resultados= linea **1**---------------------------------------
 //Pop up stuff;
+var cuentas = [
+    { nombre: "Mali@hotmail.com", contraseña: 111, saldo: 200 },
+    { nombre: "Gera@hotmail.com", contraseña: 111, saldo: 290 },
+    { nombre: "Maui@hotmail.com", contraseña: 111, saldo: 67 }
+];
+
+
 const openEls = document.querySelectorAll("[data-open]");
 const closeEls = document.querySelectorAll("[data-close]");
 const isVisible = "is-visible";
@@ -35,34 +42,62 @@ document.addEventListener("keyup", e => {
     }
 });
 //Cuentas preEchas
-var cuentas = [
-    { nombre: "Mali@hotmail.com", contraseña: 111, saldo: 200 },
-    { nombre: "Gera@hotmail.com", contraseña: 111, saldo: 290 },
-    { nombre: "Maui@hotmail.com", contraseña: 111, saldo: 67 }
-];
+
 
 var x = ["", 0];
 
-function ingresar() {
-
-    //esto es para que no se reinicio tu submit
-    //Code here: Alvaro Fierro
-    //Se te dara un array con nombre x donde contenga [nombre=string,saldo=Number];
-    //Como hacerlo?= estan las indicaciones en la linea **2**
+function ingresar(numeroObtenido) {
+    let error = document.getElementById("message");
+    if (cuentas[item].saldo == 990) {
+        error.innerHTML = "Alcanzo el saldo maximo alcanzado";
+    } else if ((numeroObtenido + cuentas[item].saldo) > 990) {
+        let plus;
+        plus = (numeroObtenido + cuentas[item].saldo) - 990;
+        cuentas[item].saldo = 990;
+        error.innerHTML = `El saldo que desea ingresar sobrepasa el maximo <br>
+      se le agregara el monto de 990 y se le dara cambio de <br>$${plus} pesos`;
+    } else {
+        cuentas[item].saldo += numeroObtenido;
+    }
 
 
 }
 
-function retirar() {
-    let findPerson = infoArray();
-    //esto es para que no se reinicio tu submit
-    //Code here Luis moreno
-    //Se te dara un array con nombre x donde contenga [nombre=string,saldo=Number];
-    //el resultado estan las indicaciones en la linea **4**
-    cuentas[item].saldo = y;
-    let resulDirec = document.getElementById("resultado");
-    resulDirec.innerHTML = `$${cuentas[item].saldo}`;
+var hacer = "";
 
+function appear(x) {
+    document.getElementById("block").classList.add("is-visiblep");
+    x == `s` ? hacer = "s" : x == `r` ? hacer = "r" : 0;
+    document.getElementById("message").innerHTML = "";
+}
+
+function submit() {
+    let resNumber = document.getElementById("substraer").value;
+    let resulDirec = document.getElementById("resultados");
+    console.log(typeof(resNumber));
+    hacer == `s` ? ingresar(Number(resNumber)) : hacer == `r` ? retirar(Number(resNumber)) : 0;
+    resulDirec.innerHTML = `$${cuentas[item].saldo}`;
+    document.getElementById("substraer").value = "";
+}
+
+function retirar(numeroObtenido) {
+    let error = document.getElementById("message");
+    if (cuentas[item].saldo <= 10) {
+        error.innerHTML = "No se puede retirar mas";
+    } else {
+        let lesuma;
+        cuentas[item].saldo -= numeroObtenido;
+        cuentas[item].saldo < 10 ? lesuma = true : lesuma = false;
+        if (lesuma) {
+            let cambio = 10 - cuentas[item].saldo;
+            cuentas[item].saldo += cambio;
+            console.log("se le da cambio")
+            error.innerHTML = 'Su cuenta no puede tener menos de 10 pesos le dara cambio de ' + cambio;
+            //return this.nombre+' su cuenta no puede tener menos de 10 pesos le dara cambio de '+cambio+ ' su saldo es de '+this.cantidad;
+        } else {
+            console.log("todo bn");
+        }
+    }
 }
 //get user pasword
 var pasa = false,
@@ -110,6 +145,7 @@ function infoArray() {
     if (item != -1) {
         cuentas[item].contraseña == inputContraseña ? pasa = true : pasa = false;
         if (pasa) {
+            console.log(cuentas[item].saldo);
             return [cuentas[item].nombre, cuentas[item].saldo];
         } else {
             return x;

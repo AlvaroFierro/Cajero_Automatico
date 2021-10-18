@@ -121,6 +121,7 @@ h2 {
 }
 
 .btn-pur {
+    cursor: pointer;
     border: none;
     background-color: #6844c9;
     color: white;
@@ -159,6 +160,11 @@ h2 {
 .modal.is-visible {
     visibility: visible;
     opacity: 1;
+}
+
+.is-visiblep {
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .modal-dialog {
@@ -723,6 +729,11 @@ input:not(:valid)~.app-button {
     color: rgba(0, 0, 0, 0.45);
 }
 
+.error {
+    color: rgba(255, 0, 0, 0.45) !important;
+    margin-bottom: 1rem;
+}
+
 .app-menu-icon {
     width: 1.5rem;
     height: 2px;
@@ -996,13 +1007,15 @@ input:not(:valid)~.app-button {
 }
 
 .btn-orange {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 72%;
+    width: 20rem;
     height: 3rem;
     border-radius: .3rem;
     background-color: #EC615B;
+    border: none;
 }
 
 .app-item:not(:last-child) {
@@ -1010,16 +1023,31 @@ input:not(:valid)~.app-button {
 }
 
 .Content-input {
-    width: 50%;
-    height: 80vh;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 20vh;
+    right: 5rem;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 70vh;
 }
 
 .input-flex {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .item-input:not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
+}
+
+#substraer {
+    text-align: center;
+    font-family: inherit;
+    font-weight: 700;
 }

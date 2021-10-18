@@ -22,7 +22,7 @@
                 </div>
                 <nav>
                     <div class="links">
-                        <a class="active" href="">Home</a>
+                        <a class="active" href="" return false;>Home</a>
                         <a href="">Github</a>
                     </div>
                 </nav>
@@ -62,7 +62,7 @@
                         </header>
                         <input type="email" id="Name" required pattern=".*\.\w{2,}" placeholder="Email Address" />
                         <input type="password" id="Pas" required placeholder="Password" />
-                        <a id="Login" onclick="getInfo()" class="app-button">Login</a>
+                        <a id="Login" onclick="getInfo()" class="app-button" return false;>Login</a>
                         <div class="app-register">
                             Don't have an account? <a>Sign Up</a>
                         </div>
@@ -99,31 +99,29 @@
                                 <div class="app-label">Elija la opcion que se acomode a sus necesidades</div>
                             </div>
                             <div class="app-item">
-                                <div class="btn-orange">
-                                    <a class="btn-txt" href="">Ingresar</a>
-                                </div>
+                                <button class="btn-orange btn-txt" onclick="appear(`s`)">Ingresar</button>
                             </div>
                             <div class="app-item">
-                                <div class="btn-orange">
-                                    <a class="btn-txt" href="">Retirar</a>
-                                </div>
+                                <button class="btn-orange btn-txt" onclick="appear(`r`)">Retirar</button>
                             </div>
                         </section>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="Content-input blog-shadow-dreamy">
+        <div class="Content-input blog-shadow-dreamy" id="block">
             <div class="input-flex">
                 <div class="item-input">
                     <h1>Bank Coders</h1>
                 </div>
                 <div class="item-input">
-                    <input type="text" name="" id="Ingreso">
+                    <div class="app-label">Favor de ingresar la cantidad:</div>
+                    <div class="app-label error" id="message"></div>
+                    <input type="number" id="substraer" requiredminlength="2" maxlength="8" size="10" placeholder="0">
                 </div>
                 <div class="item-input">
                     <div class="btn-orange">
-                        <a class="btn-txt" onclick="ingresar()">Ingresar</a>
+                        <button class="btn-orange btn-txt" onclick="submit()">Echo</button>
                     </div>
                 </div>
             </div>
